@@ -120,6 +120,20 @@
                                     </stackView>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="nJN-th-c5K" userLabel="Timer View">
                                         <rect key="frame" x="0.0" y="535.33333333333337" width="400" height="228.66666666666663"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text=" " textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TTU-N3-Qgx">
+                                                <rect key="frame" x="0.0" y="0.0" width="400" height="228.66666666666666"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                        <constraints>
+                                            <constraint firstItem="TTU-N3-Qgx" firstAttribute="top" secondItem="nJN-th-c5K" secondAttribute="top" id="0Xj-OV-OOC"/>
+                                            <constraint firstAttribute="bottom" secondItem="TTU-N3-Qgx" secondAttribute="bottom" id="8Qf-51-GET"/>
+                                            <constraint firstAttribute="trailing" secondItem="TTU-N3-Qgx" secondAttribute="trailing" id="H19-1a-VXh"/>
+                                            <constraint firstItem="TTU-N3-Qgx" firstAttribute="leading" secondItem="nJN-th-c5K" secondAttribute="leading" id="nDa-AJ-h0A"/>
+                                        </constraints>
                                     </view>
                                 </subviews>
                             </stackView>
@@ -134,12 +148,13 @@
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="timerLabel" destination="TTU-N3-Qgx" id="IPd-kW-nFE"/>
                         <outlet property="topLabel" destination="XLm-5r-pSP" id="Dg8-BW-rPD"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="137.68115942028987" y="137.94642857142856"/>
+            <point key="canvasLocation" x="136.36363636363637" y="137.44769874476987"/>
         </scene>
     </scenes>
     <resources>

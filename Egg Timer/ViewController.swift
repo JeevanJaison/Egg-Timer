@@ -16,6 +16,7 @@ class ViewController: UIViewController {
     
     @IBOutlet weak var topLabel: UILabel!
     
+    @IBOutlet weak var timerLabel: UILabel!
     @IBAction func hardnessSelected(_ sender: UIButton) {
         topLabel.text="\(sender.currentTitle!) Egg selected"
         timer.invalidate()
@@ -31,11 +32,13 @@ class ViewController: UIViewController {
     @objc func updateTimer(){
         if secondsRemaining>0{
             print("\(secondsRemaining) Seconds")
+            timerLabel.text="\(secondsRemaining) Seconds"
             secondsRemaining-=1
         }
         else{
             timer.invalidate()
             topLabel.text="Egg is Done!"
+            timerLabel.text="Enjoy your Egg!"
         }
     }
     
