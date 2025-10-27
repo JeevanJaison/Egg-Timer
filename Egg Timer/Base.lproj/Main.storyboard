@@ -4,6 +4,7 @@
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="24063"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -121,18 +122,19 @@
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="nJN-th-c5K" userLabel="Timer View">
                                         <rect key="frame" x="0.0" y="535.33333333333337" width="400" height="228.66666666666663"/>
                                         <subviews>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text=" " textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TTU-N3-Qgx">
-                                                <rect key="frame" x="0.0" y="0.0" width="400" height="228.66666666666666"/>
-                                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
-                                                <nil key="textColor"/>
-                                                <nil key="highlightedColor"/>
-                                            </label>
+                                            <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" progressViewStyle="bar" translatesAutoresizingMaskIntoConstraints="NO" id="NfT-Bl-dMg">
+                                                <rect key="frame" x="0.0" y="109.33333333333326" width="400" height="11"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="10" id="oTq-eh-WcG"/>
+                                                </constraints>
+                                                <color key="progressTintColor" systemColor="systemYellowColor"/>
+                                                <color key="trackTintColor" systemColor="systemBackgroundColor"/>
+                                            </progressView>
                                         </subviews>
                                         <constraints>
-                                            <constraint firstItem="TTU-N3-Qgx" firstAttribute="top" secondItem="nJN-th-c5K" secondAttribute="top" id="0Xj-OV-OOC"/>
-                                            <constraint firstAttribute="bottom" secondItem="TTU-N3-Qgx" secondAttribute="bottom" id="8Qf-51-GET"/>
-                                            <constraint firstAttribute="trailing" secondItem="TTU-N3-Qgx" secondAttribute="trailing" id="H19-1a-VXh"/>
-                                            <constraint firstItem="TTU-N3-Qgx" firstAttribute="leading" secondItem="nJN-th-c5K" secondAttribute="leading" id="nDa-AJ-h0A"/>
+                                            <constraint firstItem="NfT-Bl-dMg" firstAttribute="leading" secondItem="nJN-th-c5K" secondAttribute="leading" id="68W-JJ-2KO"/>
+                                            <constraint firstAttribute="trailing" secondItem="NfT-Bl-dMg" secondAttribute="trailing" id="Aok-dr-UnW"/>
+                                            <constraint firstItem="NfT-Bl-dMg" firstAttribute="centerY" secondItem="nJN-th-c5K" secondAttribute="centerY" id="NZq-W6-mno"/>
                                         </constraints>
                                     </view>
                                 </subviews>
@@ -148,7 +150,7 @@
                         </constraints>
                     </view>
                     <connections>
-                        <outlet property="timerLabel" destination="TTU-N3-Qgx" id="IPd-kW-nFE"/>
+                        <outlet property="progressBar" destination="NfT-Bl-dMg" id="1kK-iD-3Tm"/>
                         <outlet property="topLabel" destination="XLm-5r-pSP" id="Dg8-BW-rPD"/>
                     </connections>
                 </viewController>
@@ -161,5 +163,11 @@
         <image name="hard_egg" width="287.66665649414062" height="366.33334350585938"/>
         <image name="medium_egg" width="288" height="363.33334350585938"/>
         <image name="soft_egg" width="287" height="365.33334350585938"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemYellowColor">
+            <color red="1" green="0.80000000000000004" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
     </resources>
 </document>
